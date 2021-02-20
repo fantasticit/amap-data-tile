@@ -2,7 +2,7 @@
 
 > [在线 Demo](https://fantasticit.gitee.io/amap-data-tile/)
 
-![示例](https://wipi.oss-cn-shanghai.aliyuncs.com/2021-02-19/20210219171220.jpg)
+<img src="https://wipi.oss-cn-shanghai.aliyuncs.com/2021-02-19/20210219171220.jpg" alt="示例" width="400" />
 
 假设开发中，遇到这样一个需求：“接口返回一片地区内所有的小区的电子围栏，将小区绘制到高德地图上”。很容易写出下面这样的代码：
 
@@ -15,7 +15,7 @@ for (const item of data) {
 }
 ```
 
-![效果](https://wipi.oss-cn-shanghai.aliyuncs.com/2021-02-19/20210219171709.jpg)
+<img src="https://wipi.oss-cn-shanghai.aliyuncs.com/2021-02-19/20210219171709.jpg" alt="可能渲染结果" width="400" />
 
 效果大致可能就是这样，在实际运行中，很有可能会非常卡顿，因为绘制耗了大量时间，如果在地图上还有事件交互，也可能会非常卡顿。实际业务根本无法使用，这时候就要找办法性能优化，翻阅高德地图的文档示例，可能会发现有“集群”、“海量点”渲染优化等示例，但是实际上在项目中可能还是没法使用（比如这个需求是绘制小区）。
 
@@ -27,4 +27,4 @@ for (const item of data) {
 
 通过地图当前的视口、缩放登记，获取当前可以渲染的数据、被聚合的数据。
 
-![效果](https://wipi.oss-cn-shanghai.aliyuncs.com/2021-02-20/amap-point-tile-480.gif)
+<img src="https://wipi.oss-cn-shanghai.aliyuncs.com/2021-02-20/amap-point-tile-480.gif" alt="优化效果" width="400" />
